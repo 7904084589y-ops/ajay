@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPro Max - Latest Smartphone Technology</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2>TechPro</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#specs">Specs</a></li>
+                <li><a href="#comparison">Compare</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">New Release</div>
+            <h1>TechPro Max</h1>
+            <p class="hero-subtitle">Revolutionary smartphone with cutting-edge technology</p>
+            <div class="hero-features">
+                <div class="feature-highlight">
+                    <i class="fas fa-battery-full"></i>
+                    <span>48H Battery Life</span>
+                </div>
+                <div class="feature-highlight">
+                    <i class="fas fa-camera"></i>
+                    <span>108MP Pro Camera</span>
+                </div>
+                <div class="feature-highlight">
+                    <i class="fas fa-display"></i>
+                    <span>6.8" AMOLED Display</span>
+                </div>
+            </div>
+            <div class="hero-pricing">
+                <div class="price-main">$999</div>
+                <div class="price-subtitle">Starting from</div>
+            </div>
+            <div class="hero-buttons">
+                <button class="btn-primary">Pre-Order Now</button>
+                <button class="btn-secondary">View 360°</button>
+            </div>
+        </div>
+        <div class="hero-device">
+            <div class="device-container">
+                <div class="device-frame">
+                    <div class="device-screen">
+                        <div class="screen-content">
+                            <div class="screen-header">
+                                <div class="status-bar">
+                                    <span class="time">9:41</span>
+                                    <div class="indicators">
+                                        <i class="fas fa-signal"></i>
+                                        <i class="fas fa-wifi"></i>
+                                        <i class="fas fa-battery-three-quarters"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="screen-body">
+                                <div class="app-grid">
+                                    <div class="app-icon camera"></div>
+                                    <div class="app-icon gallery"></div>
+                                    <div class="app-icon settings"></div>
+                                    <div class="app-icon music"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="device-reflection"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 360° View Section -->
+    <section class="view360-section">
+        <div class="container">
+            <h2>Experience in 360°</h2>
+            <p>Drag to rotate and explore every angle</p>
+            <div class="view360-container">
+                <div class="phone-360" id="phone360">
+                    <div class="phone-frame">
+                        <img src="../assets/images/phone-front.jpg" alt="Phone Front" class="phone-image">
+                        <img src="../assets/images/phone-back.jpg" alt="Phone Back" class="phone-image">
+                        <img src="../assets/images/phone-side.jpg" alt="Phone Side" class="phone-image">
+                    </div>
+                </div>
+                <div class="view-controls">
+                    <button class="control-btn" id="rotateLeft">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="control-btn" id="rotateRight">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="control-btn" id="autoRotate">
+                        <i class="fas fa-play"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section id="specs" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Revolutionary Features</h2>
+                <p>Designed for the future of mobile technology</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Lightning Fast</h3>
+                    <p>Powered by the latest A17 Bionic chip with 5G connectivity for unmatched performance</p>
+                    <div class="feature-specs">
+                        <span>5nm Process</span>
+                        <span>6-Core CPU</span>
+                        <span>5-Core GPU</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera-retro"></i>
+                    </div>
+                    <h3>Pro Camera System</h3>
+                    <p>Triple camera setup with advanced computational photography and 8K video recording</p>
+                    <div class="feature-specs">
+                        <span>108MP Main</span>
+                        <span>32MP Ultra Wide</span>
+                        <span>16MP Telephoto</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Stunning Display</h3>
+                    <p>6.8-inch Super Retina XDR display with ProMotion technology and always-on capability</p>
+                    <div class="feature-specs">
+                        <span>120Hz Refresh</span>
+                        <span>2000 Nits Peak</span>
+                        <span>HDR10+ Support</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-battery-half"></i>
+                    </div>
+                    <h3>All-Day Battery</h3>
+                    <p>Advanced battery technology with fast charging and wireless charging capabilities</p>
+                    <div class="feature-specs">
+                        <span>5000mAh</span>
+                        <span>50W Fast Charge</span>
+                        <span>25W Wireless</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications Table -->
+    <section class="specs-table-section">
+        <div class="container">
+            <h2>Complete Specifications</h2>
+            <div class="specs-table">
+                <div class="specs-row">
+                    <div class="spec-label">Display</div>
+                    <div class="spec-value">6.8-inch Super Retina XDR OLED, 120Hz</div>
+                </div>
+                <div class="specs-row">
+                    <div class="spec-label">Processor</div>
+                    <div class="spec-value">A17 Bionic chip with 6-core CPU</div>
+                </div>
+                <div class="specs-row">
+                    <div class="spec-label">Storage</div>
+                    <div class="spec-value">128GB / 256GB / 512GB / 1TB</div>
+                </div>
+                <div class="specs-row">
+                    <div class="spec-label">Camera</div>
+                    <div class="spec-value">108MP + 32MP + 16MP Triple System</div>
+                </div>
+                <div class="specs-row">
+                    <div class="spec-label">Battery</div>
+                    <div class="spec-value">5000mAh with 50W fast charging</div>
+                </div>
+                <div class="specs-row">
+                    <div class="spec-label">Operating System</div>
+                    <div class="spec-value">iOS 17 with latest features</div>
+                </div>
+                <div class="specs-row">
+                    <div class="spec-label">Connectivity</div>
+                    <div class="spec-value">5G, Wi-Fi 6E, Bluetooth 5.3</div>
+                </div>
+                <div class="specs-row">
+                    <div class="spec-label">Dimensions</div>
+                    <div class="spec-value">160.7 x 77.6 x 7.85 mm</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Model Comparison -->
+    <section id="comparison" class="comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Compare Models</h2>
+                <p>Choose the perfect TechPro for your needs</p>
+            </div>
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div class="model-header">
+                        <h3>TechPro</h3>
+                        <div class="price">$799</div>
+                    </div>
+                    <div class="model-header featured">
+                        <h3>TechPro Max</h3>
+                        <div class="price">$999</div>
+                        <div class="badge">Most Popular</div>
+                    </div>
+                    <div class="model-header">
+                        <h3>TechPro Ultra</h3>
+                        <div class="price">$1,199</div>
+                    </div>
+                </div>
+                <div class="comparison-body">
+                    <div class="comparison-row">
+                        <div class="feature-name">Display</div>
+                        <div class="feature-value">6.1" OLED</div>
+                        <div class="feature-value featured">6.8" OLED 120Hz</div>
+                        <div class="feature-value">6.8" OLED 120Hz</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="feature-name">Camera</div>
+                        <div class="feature-value">64MP Dual</div>
+                        <div class="feature-value featured">108MP Triple</div>
+                        <div class="feature-value">128MP Quad</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="feature-name">Battery</div>
+                        <div class="feature-value">4000mAh</div>
+                        <div class="feature-value featured">5000mAh</div>
+                        <div class="feature-value">5500mAh</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="feature-name">Storage</div>
+                        <div class="feature-value">128GB</div>
+                        <div class="feature-value featured">128-1TB</div>
+                        <div class="feature-value">256GB-1TB</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="feature-name">Processor</div>
+                        <div class="feature-value">A16 Bionic</div>
+                        <div class="feature-value featured">A17 Bionic</div>
+                        <div class="feature-value">A17 Pro</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Customer Reviews</h2>
+                <div class="overall-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="rating-score">4.8/5</span>
+                    <span class="review-count">(2,847 reviews)</span>
+                </div>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <h4>John D.</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <span class="review-date">2 weeks ago</span>
+                    </div>
+                    <p class="review-text">"Absolutely stunning phone! The camera quality is incredible and the battery life lasts me all day. Worth every penny!"</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <h4>Sarah M.</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <span class="review-date">1 month ago</span>
+                    </div>
+                    <p class="review-text">"The display is gorgeous and the performance is buttery smooth. Face ID works perfectly even with my mask on."</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <h4>Mike R.</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <span class="review-date">3 weeks ago</span>
+                    </div>
+                    <p class="review-text">"Great upgrade from my old phone. The 120Hz display makes everything feel so responsive. Highly recommended!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Purchase Options -->
+    <section class="purchase-section">
+        <div class="container">
+            <div class="purchase-content">
+                <div class="purchase-info">
+                    <h2>Choose Your TechPro Max</h2>
+                    <div class="storage-options">
+                        <div class="storage-option" data-storage="128gb">
+                            <h3>128GB</h3>
+                            <div class="price">$999</div>
+                        </div>
+                        <div class="storage-option featured" data-storage="256gb">
+                            <h3>256GB</h3>
+                            <div class="price">$1,099</div>
+                            <div class="badge">Best Value</div>
+                        </div>
+                        <div class="storage-option" data-storage="512gb">
+                            <h3>512GB</h3>
+                            <div class="price">$1,299</div>
+                        </div>
+                    </div>
+                    <div class="payment-options">
+                        <h3>Payment Options</h3>
+                        <div class="payment-plans">
+                            <div class="payment-plan">
+                                <div class="plan-name">Pay in Full</div>
+                                <div class="plan-price">$999</div>
+                            </div>
+                            <div class="payment-plan featured">
+                                <div class="plan-name">24 Monthly Payments</div>
+                                <div class="plan-price">$41.62/mo</div>
+                                <div class="plan-note">0% APR</div>
+                            </div>
+                            <div class="payment-plan">
+                                <div class="plan-name">12 Monthly Payments</div>
+                                <div class="plan-price">$83.25/mo</div>
+                                <div class="plan-note">0% APR</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="purchase-actions">
+                    <div class="selected-config">
+                        <h3>Selected: 256GB Model</h3>
+                        <div class="config-price">$1,099</div>
+                    </div>
+                    <button class="btn-buy">Buy Now</button>
+                    <button class="btn-preorder">Pre-Order</button>
+                    <div class="trust-badges">
+                        <div class="trust-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>2 Year Warranty</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-undo-alt"></i>
+                            <span>30-Day Returns</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-truck"></i>
+                            <span>Free Shipping</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechPro</h3>
+                    <p>Cutting-edge technology for the modern world</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Smartphones</a></li>
+                        <li><a href="#">Tablets</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Investors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Warranty</a></li>
+                        <li><a href="#">Repairs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

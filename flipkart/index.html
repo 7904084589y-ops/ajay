@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirt Store - Premium Quality T-Shirts Online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="top-left">
+                    <a href="#" class="platform-link">
+                        <div class="logo-text">
+                            <span class="logo-main">T-Shirt</span>
+                            <span class="logo-sub">Store</span>
+                        </div>
+                    </a>
+                    <div class="search-container">
+                        <input type="text" placeholder="Search T-Shirt Store for T-shirts, sizes, colors..." class="search-input">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="top-right">
+                    <div class="currency-converter">
+                        <select id="currencySelect">
+                            <option value="INR">₹ INR</option>
+                            <option value="USD">$ USD</option>
+                            <option value="EUR">€ EUR</option>
+                            <option value="GBP">£ GBP</option>
+                        </select>
+                    </div>
+                    <button class="login-btn">Login</button>
+                    <div class="cart-container">
+                        <button class="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            Cart
+                            <span class="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Bar -->
+            <nav class="main-nav">
+                <div class="nav-left">
+                    <button class="category-btn">
+                        <i class="fas fa-bars"></i>
+                        Categories
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="#">Men's T-Shirts</a></li>
+                        <li><a href="#">Women's T-Shirts</a></li>
+                        <li><a href="#">Printed T-Shirts</a></li>
+                        <li><a href="#">Plain T-Shirts</a></li>
+                        <li><a href="#">Designer T-Shirts</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <a href="#" class="nav-link">Become a Seller</a>
+                    <a href="#" class="nav-link">Gift Cards</a>
+                    <a href="#" class="nav-link">Help Center</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>T-Shirt Sale</h1>
+                    <p>Premium quality T-shirts at affordable prices - Comfortable, Stylish & Durable!</p>
+                    <div class="hero-timer">
+                        <div class="timer">
+                            <span class="time" id="days">00</span>
+                            <span class="label">Days</span>
+                        </div>
+                        <div class="timer">
+                            <span class="time" id="hours">00</span>
+                            <span class="label">Hours</span>
+                        </div>
+                        <div class="timer">
+                            <span class="time" id="minutes">00</span>
+                            <span class="label">Minutes</span>
+                        </div>
+                        <div class="timer">
+                            <span class="time" id="seconds">00</span>
+                            <span class="label">Seconds</span>
+                        </div>
+                    </div>
+                    <button class="shop-now-btn">Shop Now</button>
+                </div>
+                <div class="hero-image">
+                    <img src="../assets/images/hero-offer.jpg" alt="Middle Class Sale" onerror="this.src='../assets/images/placeholder.jpg'">
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories-section">
+            <div class="container">
+                <h2>Shop by Category</h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <img src="../assets/images/mens-tshirts.jpg" alt="Men's T-Shirts" onerror="this.src='../assets/images/placeholder.jpg'">
+                        <h3>Men's T-Shirts</h3>
+                        <p>Casual & formal styles</p>
+                    </div>
+                    <div class="category-card">
+                        <img src="../assets/images/womens-tshirts.jpg" alt="Women's T-Shirts" onerror="this.src='../assets/images/placeholder.jpg'">
+                        <h3>Women's T-Shirts</h3>
+                        <p>Trendy & comfortable</p>
+                    </div>
+                    <div class="category-card">
+                        <img src="../assets/images/printed-tshirts.jpg" alt="Printed T-Shirts" onerror="this.src='../assets/images/placeholder.jpg'">
+                        <h3>Printed T-Shirts</h3>
+                        <p>Custom designs & graphics</p>
+                    </div>
+                    <div class="category-card">
+                        <img src="../assets/images/plain-tshirts.jpg" alt="Plain T-Shirts" onerror="this.src='../assets/images/placeholder.jpg'">
+                        <h3>Plain T-Shirts</h3>
+                        <p>Classic solid colors</p>
+                    </div>
+                    <div class="category-card">
+                        <img src="../assets/images/designer-tshirts.jpg" alt="Designer T-Shirts" onerror="this.src='../assets/images/placeholder.jpg'">
+                        <h3>Designer T-Shirts</h3>
+                        <p>Premium & stylish</p>
+                    </div>
+                    <div class="category-card">
+                        <img src="../assets/images/oversized-tshirts.jpg" alt="Oversized T-Shirts" onerror="this.src='../assets/images/placeholder.jpg'">
+                        <h3>Oversized T-Shirts</h3>
+                        <p>Relaxed fit & trendy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deals of the Day -->
+        <section class="deals-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Products</h2>
+                    <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="deals-grid" id="featuredProducts">
+                    <!-- Products will be loaded dynamically from admin uploads -->
+                    <div class="no-products-message" id="noProductsMessage" style="display: none;">
+                        <div style="text-align: center; padding: 3rem; background: var(--glass-bg); backdrop-filter: blur(10px); border: 1px solid var(--glass-border); border-radius: var(--border-radius-lg);">
+                            <i class="fas fa-box-open" style="font-size: 4rem; color: var(--text-secondary); margin-bottom: 1rem;"></i>
+                            <h3 style="color: var(--text-primary); margin-bottom: 0.5rem;">No Products Available</h3>
+                            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Upload products through the admin panel to see them here.</p>
+                            <a href="../admin/login.html" style="background: var(--primary-gradient); color: white; padding: 0.8rem 2rem; border-radius: var(--border-radius-lg); text-decoration: none; transition: all 0.3s ease;">Go to Admin Panel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bank Offers -->
+        <section class="bank-offers">
+            <div class="container">
+                <h2>Bank Offers & Cashback</h2>
+                <div class="offers-grid">
+                    <div class="offer-card">
+                        <div class="bank-logo">HDFC</div>
+                        <div class="offer-details">
+                            <h3>10% Instant Discount</h3>
+                            <p>On HDFC Bank Credit Cards</p>
+                            <span class="validity">Valid till Dec 31</span>
+                        </div>
+                    </div>
+                    <div class="offer-card">
+                        <div class="bank-logo">ICICI</div>
+                        <div class="offer-details">
+                            <h3>5% Cashback</h3>
+                            <p>On ICICI Bank Debit Cards</p>
+                            <span class="validity">Valid till Dec 31</span>
+                        </div>
+                    </div>
+                    <div class="offer-card">
+                        <div class="bank-logo">SBI</div>
+                        <div class="offer-details">
+                            <h3>No Cost EMI</h3>
+                            <p>On SBI Credit Cards</p>
+                            <span class="validity">Valid till Dec 31</span>
+                        </div>
+                    </div>
+                    <div class="offer-card">
+                        <div class="bank-logo">AXIS</div>
+                        <div class="offer-details">
+                            <h3>15% Discount</h3>
+                            <p>On Axis Bank Cards</p>
+                            <span class="validity">Valid till Dec 31</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Currency Converter -->
+        <section class="currency-converter-section">
+            <div class="container">
+                <div class="converter-container">
+                    <h2>Currency Converter</h2>
+                    <div class="converter-form">
+                        <div class="amount-input">
+                            <label>Amount</label>
+                            <input type="number" id="amount" placeholder="Enter amount" min="0" step="0.01">
+                        </div>
+                        <div class="currency-selects">
+                            <div class="currency-input">
+                                <label>From</label>
+                                <select id="fromCurrency">
+                                    <option value="INR">₹ Indian Rupee (INR)</option>
+                                    <option value="USD">$ US Dollar (USD)</option>
+                                    <option value="EUR">€ Euro (EUR)</option>
+                                    <option value="GBP">£ British Pound (GBP)</option>
+                                    <option value="JPY">¥ Japanese Yen (JPY)</option>
+                                </select>
+                            </div>
+                            <div class="swap-btn">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <div class="currency-input">
+                                <label>To</label>
+                                <select id="toCurrency">
+                                    <option value="USD">$ US Dollar (USD)</option>
+                                    <option value="INR">₹ Indian Rupee (INR)</option>
+                                    <option value="EUR">€ Euro (EUR)</option>
+                                    <option value="GBP">£ British Pound (GBP)</option>
+                                    <option value="JPY">¥ Japanese Yen (JPY)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="convert-btn" id="convertBtn">Convert</button>
+                    </div>
+                    <div class="conversion-result" id="conversionResult">
+                        <div class="result-display">
+                            <span id="resultAmount">0.00</span>
+                            <span id="resultCurrency">USD</span>
+                        </div>
+                        <div class="exchange-rate" id="exchangeRate">
+                            1 INR = 0.012 USD
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Flipkart</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Corporate Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">Payments</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Cancellation & Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Policy</h3>
+                    <ul>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Terms Of Use</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Social</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Middle Class Selling Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

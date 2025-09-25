@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - T-Shirt Store Management</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Admin Sidebar -->
+    <div class="admin-sidebar" id="adminSidebar">
+        <div class="sidebar-header">
+            <div class="admin-logo">
+                <i class="fas fa-cog"></i>
+                <h2>Admin Panel</h2>
+            </div>
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <nav class="admin-nav">
+            <ul class="nav-menu">
+                <li class="nav-item active" data-page="overview">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Overview</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="fashion">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-tshirt"></i>
+                        <span>T-Shirt Products</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="analytics">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-page="settings">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="admin-info">
+                <div class="admin-avatar">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <div class="admin-details">
+                    <div class="admin-name">Authorized Admin</div>
+                    <div class="admin-role">7904084589y@gmail.com</div>
+                </div>
+            </div>
+            <button class="logout-btn" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="admin-main" id="adminMain">
+        <!-- Overview Page -->
+        <div class="admin-page active" id="overviewPage">
+            <div class="page-header">
+                <h1>Dashboard Overview</h1>
+                <div class="header-actions">
+                    <button class="btn btn-primary" id="refreshData">
+                        <i class="fas fa-sync-alt"></i>
+                        Refresh
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="fashionCount">0</h3>
+                        <p>T-Shirt Products</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="totalProducts">0</h3>
+                        <p>Total Products</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="activity-section">
+                <h2>Recent Activity</h2>
+                <div class="activity-list" id="activityList">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="activity-info">
+                            <p>System initialized</p>
+                            <span class="activity-time">Just now</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- T-Shirt Products Page -->
+        <div class="admin-page" id="fashionPage">
+            <div class="page-header">
+                <h1>T-Shirt Products</h1>
+                <div class="header-actions">
+                    <button class="btn btn-primary" id="addFashionProduct">
+                        <i class="fas fa-plus"></i>
+                        Add T-Shirt
+                    </button>
+                </div>
+            </div>
+
+            <div class="products-table-container">
+                <table class="products-table" id="fashionProductsTable">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Stock</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="fashionProductsBody">
+                        <!-- Products will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <!-- Analytics Page -->
+        <div class="admin-page" id="analyticsPage">
+            <div class="page-header">
+                <h1>Analytics</h1>
+                <div class="header-actions">
+                    <select class="time-filter" id="timeFilter">
+                        <option value="7">Last 7 days</option>
+                        <option value="30">Last 30 days</option>
+                        <option value="90">Last 90 days</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="analytics-grid">
+                <div class="analytics-card">
+                    <h3>Page Views</h3>
+                    <div class="analytics-number" id="pageViews">0</div>
+                    <div class="analytics-chart">
+                        <canvas id="viewsChart" width="300" height="150"></canvas>
+                    </div>
+                </div>
+                <div class="analytics-card">
+                    <h3>Product Views</h3>
+                    <div class="analytics-number" id="productViews">0</div>
+                    <div class="analytics-chart">
+                        <canvas id="productChart" width="300" height="150"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Page -->
+        <div class="admin-page" id="settingsPage">
+            <div class="page-header">
+                <h1>Settings</h1>
+            </div>
+
+            <div class="settings-container">
+                <div class="settings-section">
+                    <h2>General Settings</h2>
+                    <form class="settings-form" id="generalSettings">
+                        <div class="form-group">
+                            <label>Site Title</label>
+                            <input type="text" value="E-Commerce Store" id="siteTitle">
+                        </div>
+                        <div class="form-group">
+                            <label>Admin Email</label>
+                            <input type="email" value="admin@store.com" id="adminEmail">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Settings</button>
+                    </form>
+                </div>
+
+                <div class="settings-section">
+                    <h2>Security</h2>
+                    <form class="settings-form" id="securitySettings">
+                        <div class="form-group">
+                            <label>Current Password</label>
+                            <input type="password" placeholder="Enter current password">
+                        </div>
+                        <div class="form-group">
+                            <label>New Password</label>
+                            <input type="password" placeholder="Enter new password">
+                        </div>
+                        <div class="form-group">
+                            <label>Confirm Password</label>
+                            <input type="password" placeholder="Confirm new password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Change Password</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="modalTitle">Add Product</h2>
+                <button class="modal-close" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="productForm" enctype="multipart/form-data">
+                    <input type="hidden" id="productId" name="productId">
+                    <input type="hidden" id="productCategory" name="productCategory">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Product Name</label>
+                            <input type="text" id="productName" name="productName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Price ($)</label>
+                            <input type="number" id="productPrice" name="productPrice" step="0.01" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea id="productDescription" name="productDescription" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Stock Quantity</label>
+                            <input type="number" id="productStock" name="productStock" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Status</label>
+                            <select id="productStatus" name="productStatus">
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                                <option value="out-of-stock">Out of Stock</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- T-Shirt-specific fields -->
+                    <div id="fashionFields" class="category-fields">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Sizes (comma-separated)</label>
+                                <input type="text" id="productSizes" name="productSizes" placeholder="S,M,L,XL,XXL">
+                            </div>
+                            <div class="form-group">
+                                <label>Colors (comma-separated)</label>
+                                <input type="text" id="productColors" name="productColors" placeholder="White,Black,Red,Blue">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Material</label>
+                                <select id="productMaterial" name="productMaterial">
+                                    <option value="100% Cotton">100% Cotton</option>
+                                    <option value="Cotton Blend">Cotton Blend</option>
+                                    <option value="Polyester">Polyester</option>
+                                    <option value="Organic Cotton">Organic Cotton</option>
+                                    <option value="Bamboo Fabric">Bamboo Fabric</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>T-Shirt Type</label>
+                                <select id="productType" name="productType">
+                                    <option value="Basic T-Shirt">Basic T-Shirt</option>
+                                    <option value="Printed T-Shirt">Printed T-Shirt</option>
+                                    <option value="Polo T-Shirt">Polo T-Shirt</option>
+                                    <option value="V-Neck T-Shirt">V-Neck T-Shirt</option>
+                                    <option value="Henley T-Shirt">Henley T-Shirt</option>
+                                    <option value="Tank Top">Tank Top</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Product Image URL</label>
+                        <input type="url" id="productImage" name="productImage" placeholder="https://example.com/image.jpg">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelProduct">Cancel</button>
+                        <button type="submit" class="btn btn-primary" id="saveProduct">Save Product</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
